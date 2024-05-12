@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="table">
+    <div
+      class="collapse"
+      (click)="collapseTable()"
+      data-bs-toggle="collapse"
+      href="#collapseExample"
+      role="button"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      {{ isCollapsed ? "Collapse" : "Expand" }}
+    </div>
+    <div
+      class="gridTable"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      *ngIf="isCollapsed"
+    >
+      <div
+        class="gridTable"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        <gui-grid
+          [columns]="columns"
+          [source]="source"
+          [maxHeight]="500"
+          [loading]="loading"
+          [paging]="paging"
+          [sorting]="sorting"
+        >
+        </gui-grid>
+      </div>
+    </div>
+
+    <div class="barchart" (window:resize)="onResize($event)">
+      <ngx-charts-bar-vertical-2d
+        [view]="view"
+        [results]="multi"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [animations]="animations"
+      >
+      </ngx-charts-bar-vertical-2d>
+    </div>
+  </div>
+</div>

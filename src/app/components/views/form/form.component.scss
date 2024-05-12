@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+
+  .data-form {
+    width: 100%;
+    max-width: 400px; // Adjust this value as needed
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .error-message {
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    form {
+      align-items: center;
+      justify-content: center;
+
+      .form-group {
+        margin-bottom: 20px;
+
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+          }
+        }
+        .error {
+          color: red;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      }
+
+      button {
+        border-radius: 100px;
+        font-family: "airbnbregular";
+        font-size: 1rem;
+        border: 1px solid #3e8bb8 !important;
+        background: #3e8bb8 !important;
+        color: #ffffff;
+        text-transform: none !important;
+        height: 2rem;
+        width: 7rem;
+        &:hover,
+        &:active,
+        &:focus {
+          border: 1px solid #3e8bb8 !important;
+          background: #3e8bb8 !important;
+          color: #ffffff;
+        }
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+          color: #666666;
+        }
+        &.disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+.buttonc {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}

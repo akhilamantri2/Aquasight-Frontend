@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.user {
+  font-size: 0.8rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+.button {
+  border-radius: 100px;
+  font-family: "airbnbregular";
+  font-size: 1.2rem;
+  border: 1px solid #3e8bb8 !important;
+  background: #3e8bb8 !important;
+  color: #ffffff;
+  text-transform: none !important;
+  height: 2rem;
+  width: 7rem;
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid #3e8bb8 !important;
+    background: #3e8bb8 !important;
+    color: #ffffff;
+  }
+}
+.username {
+  padding: 1rem;
+}
+.title {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #3e8bb8;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}

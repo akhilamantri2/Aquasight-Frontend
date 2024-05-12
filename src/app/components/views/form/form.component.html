@@ -1,0 +1,59 @@
+<app-loader *ngIf="isloading"></app-loader>
+<div class="container">
+  <div class="data-form">
+    <h3>Flow Pressure Data Form</h3>
+    <p class="error">{{ errorMessage }}</p>
+    <form [formGroup]="dataForm">
+      <div class="form-group">
+        <label for="flow">Flow:</label>
+        <input
+          formControlName="flow"
+          class="input"
+          type="number"
+          id="flow"
+          placeholder="Enter flow"
+        />
+        <span
+          *ngIf="dataForm.get('flow')?.invalid && dataForm.get('flow')?.touched"
+          class="error"
+          >*Flow is required</span
+        >
+        <span *ngIf="dataForm.controls.flow.errors?.['min']" class="error"
+          >*Flow must be greater than zero.</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="pressure">Pressure:</label>
+        <input
+          formControlName="pressure"
+          class="input"
+          type="number"
+          id="pressure"
+          placeholder="Enter pressure"
+        />
+        <span
+          *ngIf="
+            dataForm.get('pressure')?.invalid &&
+            dataForm.get('pressure')?.touched
+          "
+          class="error"
+          >*Pressure is required</span
+        >
+        <span *ngIf="dataForm.controls.pressure.errors?.['min']" class="error"
+          >*Pressure must be greater than zero.</span
+        >
+      </div>
+      <div class="buttonc">
+        <button
+          (click)="onSubmit()"
+          [disabled]="dataForm.invalid"
+          [class.disabled]="dataForm.invalid"
+          class="button"
+        >
+          Add data
+        </button>
+        <button (click)="onView()" class="button">View data</button>
+      </div>
+    </form>
+  </div>
+</div>

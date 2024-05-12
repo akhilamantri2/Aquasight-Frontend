@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+// Original styling
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header, footer {
+    background-color: #f1f1f1;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    width: 100%;
+  }
+  
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  // Animations
+  @mixin slideFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @mixin slideFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .header .moving-text {
+    @include slideFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .footer .moving-text {
+    @include slideFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  

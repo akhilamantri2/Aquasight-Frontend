@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.table {
+  width: 80vw;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.barchart {
+  width: 90vw;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  transition: all 1s ease-in-out;
+}
+
+.collapse {
+  width: max-content;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.gridTable {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
